@@ -1,0 +1,98 @@
+{
+  "edges_nmos": [
+    [
+      "ABCD",
+      "DED"
+    ],
+    [
+      "ABCS",
+      "DES"
+    ],
+    [
+      "AD",
+      "AS"
+    ],
+    [
+      "AD",
+      "BCS"
+    ],
+    [
+      "BD",
+      "BS"
+    ],
+    [
+      "BD",
+      "CD"
+    ],
+    [
+      "BS",
+      "CS"
+    ],
+    [
+      "CD",
+      "CS"
+    ],
+    [
+      "DD",
+      "DS"
+    ],
+    [
+      "DD",
+      "ES"
+    ],
+    [
+      "ED",
+      "ES"
+    ]
+  ],
+  "edges_pmos": [
+    [
+      "AD",
+      "AS"
+    ],
+    [
+      "BD",
+      "BS"
+    ],
+    [
+      "CD",
+      "CS"
+    ],
+    [
+      "DD",
+      "DS"
+    ],
+    [
+      "ED",
+      "ES"
+    ]
+  ],
+  "euler_nmos": [],
+  "euler_pmos": [],
+  "out_nmos": [
+    "ABCD",
+    "DED",
+    "ED"
+  ],
+  "out_pmos": [
+    "AD",
+    "BD",
+    "CD",
+    "DD",
+    "ED"
+  ],
+  "source_nmos": [
+    "ABCS",
+    "AS",
+    "BCS",
+    "DES",
+    "DS"
+  ],
+  "source_pmos": [
+    "AS",
+    "BS",
+    "CS",
+    "DS",
+    "ES"
+  ]
+}
