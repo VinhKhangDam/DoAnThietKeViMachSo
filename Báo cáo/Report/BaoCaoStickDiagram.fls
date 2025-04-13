@@ -306,12 +306,12 @@ INPUT ./BaoCaoStickDiagram.out
 INPUT ./BaoCaoStickDiagram.out
 OUTPUT BaoCaoStickDiagram.out
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/vntex/vnr/vnbx12.tfm
-INPUT ../PNG/CE.png
-INPUT ../PNG/CE.png
-INPUT ../PNG/CE.png
-INPUT ../PNG/CE.png
-INPUT ../PNG/CE.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/vntex/vnr/vnbx12.tfm
+INPUT ../PNG/CE.png
+INPUT ../PNG/CE.png
+INPUT ../PNG/CE.png
+INPUT ../PNG/CE.png
+INPUT ../PNG/CE.png
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/vntex/vnr/vnr17.tfm
 INPUT ./BaoCaoStickDiagram.toc

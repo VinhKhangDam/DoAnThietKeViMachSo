@@ -12,9 +12,10 @@
 \usepackage{float}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{everypage-1x} % Gói để áp dụng khung
+\usepackage{everypage-1x}
 
-\geometry{left=3cm,right=2.5cm,top=1cm,bottom=2.5cm}
+
+\geometry{left=2cm,right=1.5cm,top=1cm,bottom=2.5cm}
 \onehalfspacing
 
 \titleformat{\section}{\bfseries\large}{\thesection}{1em}{}
@@ -25,12 +26,10 @@
 \AddEverypageHook{
     \ifnum\value{page}=1
         \begin{tikzpicture}[remember picture, overlay]
-            % Điều chỉnh khung rộng hơn nội dung
+            % Vẽ khung bao quanh toàn bộ trang
             \draw[thick, black] 
-                ([xshift=-1.5cm, yshift=1.5cm] current page.north west) -- 
-                ([xshift=1.5cm, yshift=1.5cm] current page.north east) -- 
-                ([xshift=1.5cm, yshift=-1.5cm] current page.south east) -- 
-                ([xshift=-1.5cm, yshift=-1.5cm] current page.south west) -- cycle;
+                ([xshift=-1cm, yshift=1cm] current page.north west) rectangle
+                ([xshift=1cm, yshift=-1cm] current page.south east);
         \end{tikzpicture}
     \fi
 }
@@ -42,9 +41,9 @@
 %----------------------------------
 \thispagestyle{empty} % Không có header hoặc footer
 \begin{center}
-\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
-\textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
-\textbf{KHOA KỸ THUẬT MÁY TÍNH}\\[1cm]
+\textbf{\Large ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+\textbf{\Large TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
+\textbf{\Large KHOA KỸ THUẬT MÁY TÍNH}\\[1cm]
 
 \begin{figure}[H]
     \centering
@@ -52,17 +51,20 @@
     \label{fig:LOGO_CE}\\
 \end{figure}
 
+\vspace {2cm}
+
 \textbf{\Large BÁO CÁO ĐỒ ÁN THIẾT KẾ VI MẠCH SỐ}\\
-\textbf{\Large STICK DIAGRAM}\\[2cm]
+\textbf{\Large STICK DIAGRAM}\\[8cm]
 
 \begin{flushleft}
-\textbf{Sinh viên thực hiện:} \\
-Đàm Vĩnh Khang : 22520606 \\
-Nguyễn Tuấn Khoa : 22520681\\[0.5cm]
 
-\textbf{Lớp:} CE222.O21\\
+\textbf{Lớp:} CE222.P21\\
 \textbf{Giảng viên hướng dẫn:} ThS. Ngô Hiếu Trường\\[1cm]
 
+\textbf{Sinh viên thực hiện:} \\
+Đàm Vĩnh Khang : 22520606 \\
+Nguyễn Tuấn Khoa : 22520681\\[3cm]
+\textbf{Thành phố Hồ Chí Minh, tháng 5 năm 2025}
 \end{flushleft}
 \end{center}
 
@@ -94,5 +96,4 @@ Chèn hình ảnh stick diagram được vẽ ra và mô tả kết quả.
 
 \section{Tổng kết}
 Viết phần kết luận, tổng hợp những gì đạt được và những điểm còn hạn chế.
-
 \end{document}
