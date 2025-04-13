@@ -1,0 +1,89 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+
+
+\geometry{left=3cm,right=2.5cm,top=1cm,bottom=2.5cm}
+\onehalfspacing
+
+\titleformat{\section}{\bfseries\large}{\thesection}{1em}{}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{1em}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\begin{document}
+
+%----------------------------------
+% Trang bìa
+%----------------------------------
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[thick] (current page.north west) rectangle (current page.south east);
+\end{tikzpicture}
+
+\begin{center}
+\textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
+\textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
+\textbf{KHOA KỸ THUẬT MÁY TÍNH}\\[1cm]
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{../PNG/CE.png}
+    \label{fig:LOGO_CE}\\
+\end{figure}
+
+
+
+\textbf{\Large BÁO CÁO ĐỒ ÁN THIẾT KẾ VI MẠCH SỐ}\\
+\textbf{\Large STICK DIAGRAM}\\[2cm]
+
+\begin{flushleft}
+\textbf{Sinh viên thực hiện:} \\
+Đàm Vĩnh Khang : 22520606 \\
+Nguyễn Tuấn Khoa : 22520681\\[0.5cm]
+
+\textbf{Lớp:} CE222.O21\\
+\textbf{Giảng viên hướng dẫn:} ThS. Ngô Hiếu Trường\\[1cm]
+
+\end{flushleft}
+\end{center}
+
+\newpage
+
+%----------------------------------
+% Mục lục
+%----------------------------------
+\tableofcontents
+\newpage
+
+%----------------------------------
+% Nội dung
+%----------------------------------
+
+\section{Giới thiệu}
+Viết phần giới thiệu ở đây.
+
+\section{Nội dung chính}
+
+\subsection{Phân tích thuật toán}
+Chi tiết cho phần phân tích, ví dụ: mô hình hóa schematic diagram, tìm đường đi Euler/Hamilton, mô tả cách sử dụng graph.
+
+\subsection{Hiện thực bằng Python}
+Viết mô tả cách cài đặt bằng Python, sử dụng thư viện matplotlib, networkx,... để vẽ đồ thị, stick diagram, các đoạn code chính.
+
+\subsection{Kết quả mô phỏng}
+Chèn hình ảnh stick diagram được vẽ ra và mô tả kết quả.
+
+\section{Tổng kết}
+Viết phần kết luận, tổng hợp những gì đạt được và những điểm còn hạn chế.
+
+\end{document}
