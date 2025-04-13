@@ -1,6 +1,6 @@
-PWD /home/vinhkhang/Documents/ThietKeViMachSo/StickDiagram/Báo cáo/Report
+PWD /home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report
 INPUT /home/vinhkhang/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT /home/vinhkhang/Documents/ThietKeViMachSo/StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex
+INPUT /home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex
 OUTPUT BaoCaoStickDiagram.log
 INPUT /usr/local/share/miktex-texmf/tex/latex/base/article.cls
 INPUT /usr/local/share/miktex-texmf/tex/latex/base/article.cls
@@ -281,6 +281,8 @@ INPUT /usr/local/share/miktex-texmf/tex/generic/pgf/libraries/pgflibraryfadings.
 INPUT /usr/local/share/miktex-texmf/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 OUTPUT BaoCaoStickDiagram.pdf
 INPUT /usr/local/share/miktex-texmf/tex/latex/tcolorbox/tcbposter.code.tex
+INPUT /home/vinhkhang/.miktex/texmfs/install/tex/latex/everypage/everypage.sty
+INPUT /home/vinhkhang/.miktex/texmfs/install/tex/latex/everypage/everypage.sty
 INPUT /usr/local/share/miktex-texmf/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/share/miktex-texmf/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./BaoCaoStickDiagram.aux

@@ -12,7 +12,7 @@
 \usepackage{float}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
-
+\usepackage{everypage} % Gói để áp dụng khung
 
 \geometry{left=3cm,right=2.5cm,top=1cm,bottom=2.5cm}
 \onehalfspacing
@@ -21,15 +21,20 @@
 \titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{1em}{}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
+% Vẽ khung chỉ cho trang đầu tiên
+\AddEverypageHook{
+    \ifnum\value{page}=1
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[thick] (current page.north west) rectangle (current page.south east);
+        \end{tikzpicture}
+    \fi
+}
+
 \begin{document}
 
 %----------------------------------
 % Trang bìa
 %----------------------------------
-\begin{tikzpicture}[remember picture, overlay]
-    \draw[thick] (current page.north west) rectangle (current page.south east);
-\end{tikzpicture}
-
 \begin{center}
 \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
 \textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
@@ -40,8 +45,6 @@
     \includegraphics[width=0.3\textwidth]{../PNG/CE.png}
     \label{fig:LOGO_CE}\\
 \end{figure}
-
-
 
 \textbf{\Large BÁO CÁO ĐỒ ÁN THIẾT KẾ VI MẠCH SỐ}\\
 \textbf{\Large STICK DIAGRAM}\\[2cm]
