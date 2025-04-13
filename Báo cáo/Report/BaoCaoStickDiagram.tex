@@ -12,7 +12,7 @@
 \usepackage{float}
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
-\usepackage{everypage} % Gói để áp dụng khung
+\usepackage{everypage-1x} % Gói để áp dụng khung
 
 \geometry{left=3cm,right=2.5cm,top=1cm,bottom=2.5cm}
 \onehalfspacing
@@ -25,7 +25,12 @@
 \AddEverypageHook{
     \ifnum\value{page}=1
         \begin{tikzpicture}[remember picture, overlay]
-            \draw[thick] (current page.north west) rectangle (current page.south east);
+            % Điều chỉnh khung rộng hơn nội dung
+            \draw[thick, black] 
+                ([xshift=-1.5cm, yshift=1.5cm] current page.north west) -- 
+                ([xshift=1.5cm, yshift=1.5cm] current page.north east) -- 
+                ([xshift=1.5cm, yshift=-1.5cm] current page.south east) -- 
+                ([xshift=-1.5cm, yshift=-1.5cm] current page.south west) -- cycle;
         \end{tikzpicture}
     \fi
 }
@@ -35,6 +40,7 @@
 %----------------------------------
 % Trang bìa
 %----------------------------------
+\thispagestyle{empty} % Không có header hoặc footer
 \begin{center}
 \textbf{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH}\\
 \textbf{TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN}\\
