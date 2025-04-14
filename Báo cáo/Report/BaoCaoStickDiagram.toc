@@ -1,18 +1,18 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {section}{\numberline {I}Tổng quát}{2}{section.1}%
-\contentsline {section}{\numberline {II}Quy trình thực hiện}{2}{section.2}%
-\contentsline {subsection}{\numberline {1}Tìm hiểu thuật toán}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2}Hiện thực bằng Python và C++}{2}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.1}Vẽ Schematic và tìm đường đi Euler trên C++}{2}{subsubsection.2.2.1}%
-\contentsline {paragraph}{\numberline {2.1.1}Hướng tiếp cận}{2}{paragraph.2.2.1.1}%
-\contentsline {paragraph}{\numberline {2.1.2}Tạo đồ thị mô hình hóa NMOS pull-down network và tìm đường đi Euler}{2}{paragraph.2.2.1.2}%
-\contentsline {subsubsection}{\hspace {6em}a. Tạo đồ thị mô hình hóa NMOS pull-down network}{2}{Item.1}%
-\contentsline {subsubsection}{\hspace {6em}b. Tìm đường đi Euler cho vùng NMOS pull-down network}{2}{Item.2}%
-\contentsline {paragraph}{\numberline {2.1.3}Tạo đồ thị mô hình hóa PMOS pull-up network và tìm đường đi Euler}{2}{paragraph.2.2.1.3}%
-\contentsline {subsubsection}{\hspace {6em}a. Tạo đồ thị mô hình hóa NMOS pull-down network}{2}{Item.3}%
-\contentsline {subsubsection}{\hspace {6em}b. Tìm đường đi Euler cho vùng NMOS pull-down network}{2}{Item.4}%
-\contentsline {paragraph}{\numberline {2.1.4}Tìm điểm nối nguồn và output}{2}{paragraph.2.2.1.4}%
-\contentsline {paragraph}{\numberline {2.1.5}Tổng kết mô hình hóa biểu thức Boolean sang Schematic Diagram}{2}{paragraph.2.2.1.5}%
-\contentsline {subsubsection}{\numberline {2.2}Vẽ Stick Diagram trên Python}{2}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {3}Kết quả mô phỏng}{2}{subsection.2.3}%
-\contentsline {section}{\numberline {III}Tổng kết}{2}{section.3}%
+\contentsline {section}{\numberline {II}Quy trình thực hiện}{3}{section.2}%
+\contentsline {subsection}{\numberline {1}Tìm hiểu thuật toán}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2}Hiện thực bằng Python và C++}{3}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.1}Vẽ Schematic và tìm đường đi Euler trên C++}{3}{subsubsection.2.2.1}%
+\contentsline {paragraph}{\numberline {2.1.1}Hướng tiếp cận}{3}{paragraph.2.2.1.1}%
+\contentsline {paragraph}{\numberline {2.1.2}Tạo đồ thị mô hình hóa NMOS pull-down network và tìm đường đi Euler}{3}{paragraph.2.2.1.2}%
+\contentsline {subsubsection}{\hspace {7.5em}a. Tạo đồ thị mô hình hóa NMOS pull-down network}{3}{Item.1}%
+\contentsline {subsubsection}{\hspace {7.5em}b. Tìm đường đi Euler cho vùng NMOS pull-down network}{3}{Item.2}%
+\contentsline {paragraph}{\numberline {2.1.3}Tạo đồ thị mô hình hóa PMOS pull-up network và tìm đường đi Euler}{3}{paragraph.2.2.1.3}%
+\contentsline {subsubsection}{\hspace {7.5em}a. Tạo đồ thị mô hình hóa NMOS pull-down network}{3}{Item.3}%
+\contentsline {subsubsection}{\hspace {7.5em}b. Tìm đường đi Euler cho vùng NMOS pull-down network}{3}{Item.4}%
+\contentsline {paragraph}{\numberline {2.1.4}Tìm điểm nối nguồn và output}{3}{paragraph.2.2.1.4}%
+\contentsline {paragraph}{\numberline {2.1.5}Tổng kết mô hình hóa biểu thức Boolean sang Schematic Diagram}{3}{paragraph.2.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.2}Vẽ Stick Diagram trên Python}{3}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {3}Kết quả mô phỏng}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {III}Tổng kết}{4}{section.3}%
