@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  14 APR 2025 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  14 APR 2025 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -880,7 +880,7 @@ Package hyperref Info: Link coloring OFF on input line 50.
 \openout4 = `BaoCaoStickDiagram.out'.
 
 \c@lstlisting=\count340
-<../PNG/CE.png, id=95, 417.56pt x 406.51875pt>
+<../PNG/CE.png, id=111, 417.56pt x 406.51875pt>
 File: ../PNG/CE.png Graphic file (type png)
 <use ../PNG/CE.png>
 Package pdftex.def Info: ../PNG/CE.png  used on input line 62.
@@ -902,21 +902,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `BaoCaoStickDiagram.out' has not changed.
-(rerunfilecheck)             Checksum: EEFFA9C727093F180378DA995B02243C;3242.
+(rerunfilecheck)             Checksum: C869BF9EE0A5753BD1BF601CD28FD024;4651.
  ) 
 Here is how much of TeX's memory you used:
- 29451 strings out of 474222
- 587246 string characters out of 5748733
+ 29455 strings out of 474222
+ 587278 string characters out of 5748733
  1931975 words of memory out of 5000000
- 51222 multiletter control sequences out of 15000+600000
+ 51226 multiletter control sequences out of 15000+600000
  565394 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,10n,99p,625b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,10n,99p,625b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on BaoCaoStickDiagram.pdf (3 pages, 74117 bytes).
+Output written on BaoCaoStickDiagram.pdf (3 pages, 74544 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 165 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
  20 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 
