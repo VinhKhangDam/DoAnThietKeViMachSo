@@ -35,7 +35,9 @@
 \renewcommand{\thesubsection}{\arabic{subsection}} % Subsection: 1, 2, 3...
 \renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}} % Subsubsection: 1.1, 2.1,...
 % Vẽ khung cho trang bìa
+\usepackage{atbegshi}
 \AddToShipoutPictureBG*{%
+    \ifnum\value{page}=1
     \AtPageLowerLeft{%
         \begin{tikzpicture}[remember picture, overlay]
             \draw[thick, black] 
@@ -44,6 +46,14 @@
                 ([xshift=-1.5cm, yshift=2cm] current page.south east);
         \end{tikzpicture}
     }
+}
+
+\hypersetup{
+    colorlinks=true, % Bỏ khung đỏ, chỉ hiển thị liên kết màu
+    linkcolor=black, % Màu liên kết trong nội dung
+    filecolor=black, % Màu liên kết file
+    urlcolor=blue, % Màu liên kết URL
+    citecolor=black % Màu liên kết trích dẫn
 }
 
 
@@ -108,7 +118,7 @@ Ví dụ: \( Y = \overline{(A + B + C) * D} \) thì input là: \( (A + B + C) * 
 
     + Biểu thức Boolean phải rõ ràng và tối ưu vì chương trình chưa có khả năng tối ưu biểu thức
 
-    + Không giới hạn số biến, tuy nhiên phải lớn hơn 1 và phù hợp nhất là 3~5 biến
+    + Không giới hạn số biến, tuy nhiên phải lớn hơn 1 và phù hợp nhất là 3 tới 5 biến
 \newpage
 %II.
 \section{Quy trình thực hiện}

@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1744622637.10866 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1744622637.98257 0
+["pdflatex"] 1744625208.61402 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1744625209.53228 0
   "../PNG/CE.png" 1744524702.16257 33593 6b4bbe96270eea2e8815b3fec1e6abd0 ""
   "/etc/texmf/web2c/texmf.cnf" 1743478725.82846 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" 1744622636.71023 6043 72e06f490084c15578c027ba42e909f8 ""
+  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" 1744625208.41137 6385 1b4d354417ce436d73b5ae57d0ce2d31 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -190,10 +190,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1744557503.50864 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1744557632 8214513 fe20233ff23398c24e0c257122c351dd ""
-  "BaoCaoStickDiagram.aux" 1744622637.89119 2885 e266da4f2f4b27a4daba7e3241e55f66 "pdflatex"
-  "BaoCaoStickDiagram.out" 1744622637.89219 4651 c869bf9ee0a5753bd1bf601cd28fd024 "pdflatex"
-  "BaoCaoStickDiagram.tex" 1744622636.71023 6043 72e06f490084c15578c027ba42e909f8 ""
-  "BaoCaoStickDiagram.toc" 1744622637.89219 1877 c29c41d83b2a2b89641fc3adb98f6cec "pdflatex"
+  "BaoCaoStickDiagram.aux" 1744625209.43435 2885 e266da4f2f4b27a4daba7e3241e55f66 "pdflatex"
+  "BaoCaoStickDiagram.out" 1744625209.43534 4651 c869bf9ee0a5753bd1bf601cd28fd024 "pdflatex"
+  "BaoCaoStickDiagram.tex" 1744625208.41137 6385 1b4d354417ce436d73b5ae57d0ce2d31 ""
+  "BaoCaoStickDiagram.toc" 1744625209.43534 1877 c29c41d83b2a2b89641fc3adb98f6cec "pdflatex"
   (generated)
   "BaoCaoStickDiagram.aux"
   "BaoCaoStickDiagram.log"
