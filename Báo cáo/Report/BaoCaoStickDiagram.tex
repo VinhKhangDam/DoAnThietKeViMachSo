@@ -13,6 +13,8 @@
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
 \usepackage{everypage-1x}
+\usepackage{atbegshi}
+\usepackage{eso-pic}
 
 
 \geometry{left=2cm,right=1.5cm,top=2cm,bottom=2.5cm}
@@ -25,6 +27,19 @@
 \renewcommand{\cftsecpagefont}{\normalfont}
 \renewcommand{\cfttoctitlefont}{\normalfont\bfseries\Large}
 \renewcommand{\cftaftertoctitle}{\hfill}
+
+% Vẽ khung cho trang bìa
+\AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+        \begin{tikzpicture}[remember picture, overlay]
+            \draw[thick, black] 
+                ([xshift=1.5cm, yshift=-1.5cm] current page.north west)
+                rectangle 
+                ([xshift=-1.5cm, yshift=2cm] current page.south east);
+        \end{tikzpicture}
+    }
+}
+
 
 \begin{document}
 %----------------------------------

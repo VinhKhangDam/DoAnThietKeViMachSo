@@ -280,6 +280,8 @@ OUTPUT BaoCaoStickDiagram.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/everypage/everypage-1x.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/everypage/everypage-1x.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./BaoCaoStickDiagram.aux
