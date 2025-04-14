@@ -16,22 +16,25 @@ void build_graph_nmos(Graph& g, const std::vector<std::string>& postfix, std::st
         if (token == "+" || token == "*") {
             std::string op2 = stk.top(); stk.pop();
             std::string op1 = stk.top(); stk.pop();
-            if (token == "*") {
+            
+            if (token == "*") {  // Series connection
+                std::string new_node = op1 + "_" + op2;
                 add_edge(g, op1 + "D", op2 + "S");
-                stk.push(op1 + op2);
+                stk.push(new_node);
                 end_node = op2 + "D";
-            } else {
+            } 
+            else {  // Parallel connection
                 add_edge(g, op1 + "S", op2 + "S");
                 add_edge(g, op1 + "D", op2 + "D");
                 stk.push(op1 + op2);
             }
-        } else {
+        } 
+        else {  // Single transistor
             add_edge(g, token + "S", token + "D");
             stk.push(token);
         }
     }
 }
-
 std::vector<std::string> build_graph_pmos(Graph& g, const std::vector<std::string>& postfix_inv, const std::vector<std::string>& nmos_path) {
     std::vector<std::string> euler_pmos(nmos_path.size());
     for (size_t i = 0; i < nmos_path.size(); ++i) {

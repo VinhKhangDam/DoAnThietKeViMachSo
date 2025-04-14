@@ -1,47 +1,42 @@
-import json
 import matplotlib.pyplot as plt
-import networkx as nx
+import json
 
+# 1. Đọc dữ liệu từ file JSON
 with open("output_data.json") as f:
     data = json.load(f)
 
-def draw_from_json(data):
-    g_nmos = nx.Graph()
-    g_pmos = nx.Graph()
+# 2. Tạo hình ảnh cực kỳ đơn giản
+plt.figure(figsize=(10, 5))
 
-    for u, v in data["edges_nmos"]:
-        g_nmos.add_edge(u, v)
-    for u, v in data["edges_pmos"]:
-        g_pmos.add_edge(u, v)
+# Vẽ các điểm node cơ bản
+for i, node in enumerate(data.get("euler_pmos", [])):
+    plt.plot(i, 1, 'bo', markersize=15)  # PMOS màu xanh
+    plt.text(i, 1.1, node, ha='center')
 
-    euler_nmos = data["euler_nmos"]
-    euler_pmos = data["euler_pmos"]
-    src_nmos = data["source_nmos"]
-    out_nmos = data["out_nmos"]
-    src_pmos = data["source_pmos"]
-    out_pmos = data["out_pmos"]
+for i, node in enumerate(data.get("euler_nmos", [])):
+    plt.plot(i, 0, 'ro', markersize=15)  # NMOS màu đỏ
+    plt.text(i, -0.1, node, ha='center')
 
-    def draw_path(ax, path, y, label):
-        for i, node in enumerate(path):
-            x = i * 2
-            ax.plot([x, x], [y - 0.5, y + 0.5], 'k-')
-            ax.text(x, y + 0.6, node, ha='center', fontsize=8)
-        ax.text(-2, y, label, fontsize=12, color='blue')
+# Vẽ đường kết nối đơn giản
+for u, v in data["edges_pmos"]:
+    if u in data.get("euler_pmos", []) and v in data.get("euler_pmos", []):
+        u_idx = data["euler_pmos"].index(u)
+        v_idx = data["euler_pmos"].index(v)
+        plt.plot([u_idx, v_idx], [1, 1], 'b-')
 
-    fig, ax = plt.subplots()
-    ax.set_aspect('equal')
-    draw_path(ax, euler_pmos, y=5, label="PMOS Path")
-    draw_path(ax, euler_nmos, y=0, label="NMOS Path")
+for u, v in data["edges_nmos"]:
+    if u in data.get("euler_nmos", []) and v in data.get("euler_nmos", []):
+        u_idx = data["euler_nmos"].index(u)
+        v_idx = data["euler_nmos"].index(v)
+        plt.plot([u_idx, v_idx], [0, 0], 'r-')
 
-    ax.plot([-2, len(euler_nmos)*2], [6, 6], 'r-', linewidth=2)
-    ax.plot([-2, len(euler_nmos)*2], [-1, -1], 'r-', linewidth=2)
-    ax.text(len(euler_nmos)*2 + 1, 6, 'Vdd', fontsize=10)
-    ax.text(len(euler_nmos)*2 + 1, -1, 'Gnd', fontsize=10)
+plt.title("Simple Stick Diagram")
+plt.axis('off')
 
-    ax.text(len(euler_nmos)*2, 2.5, 'Y', fontsize=14, color='red')
-
-    ax.axis('off')
-    plt.title("Simplified Stick Diagram from JSON")
-    plt.show()
-
-draw_from_json(data)
+# 3. Lưu file ảnh và thông báo rõ ràng
+output_file = "simple_diagram.png"
+plt.savefig(output_file)
+print(f"✅ ĐÃ LƯU THÀNH CÔNG file ảnh tại: {output_file}")
+print(f"📌 Hãy mở file bằng cách:")
+print(f"1. Trên Ubuntu: xdg-open {output_file}")
+print(f"2. Hoặc copy file về máy tính của bạn")

@@ -20,9 +20,21 @@ bool dfs(const Graph& g, const std::string& curr, const std::string& end, std::v
 }
 
 std::vector<std::string> find_hamiltonian_path(const Graph& g, const std::string& end_node) {
-    std::vector<std::string> result;
-    for (const std::string& node : g.nodes) {
-        if (dfs(g, node, end_node, result)) return result;
+    if (g.nodes.empty()) return {};
+
+    // Tìm node bắt đầu (node có chứa 'S' và degree lẻ)
+    std::string start_node;
+    for (const auto& node : g.nodes) {
+        if (node.find('S') != std::string::npos && g.adj.at(node).size() % 2 != 0) {
+            start_node = node;
+            break;
+        }
+    }
+    if (start_node.empty()) start_node = *g.nodes.begin();
+
+    std::vector<std::string> path;
+    if (dfs(g, start_node, end_node, path)) {
+        return path;
     }
     return {};
 }
