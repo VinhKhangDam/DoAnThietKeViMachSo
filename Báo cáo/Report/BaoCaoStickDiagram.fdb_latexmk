@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1744601414.93326 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1744601415.75107 0
+["pdflatex"] 1744619854.28634 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1744619855.13878 0
   "../PNG/CE.png" 1744524702.16257 33593 6b4bbe96270eea2e8815b3fec1e6abd0 ""
   "/etc/texmf/web2c/texmf.cnf" 1743478725.82846 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" 1744601414.73739 3122 098d9178b46dd09f158c3c36ee6434c2 ""
+  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAn_StickDiagram/Báo cáo/Report/BaoCaoStickDiagram.tex" 1744619851.83988 4462 cb49e58a4a5023e14eadae56c559c7aa ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -106,6 +106,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1705352648 2462 6bc53756156dbd71c1ad550d30a3b93f ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty" 1705352648 5048 425739d70251273bf93e3d51f3c40048 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo" 1705352648 8449 f07039d8e4e89f21078d9b5137579bfc ""
+  "/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty" 1561238569 51697 f8f08183cd2080d9d18a41432d651dfb ""
   "/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty" 1399239813 4378 f429f0da968c278653359293040a8f52 ""
   "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty" 1683144721 11876 6ef493863ae0d7a984706973240c2237 ""
@@ -183,10 +184,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1744557503.50864 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1744557632 8214513 fe20233ff23398c24e0c257122c351dd ""
-  "BaoCaoStickDiagram.aux" 1744601415.6644 1070 e41670c8152008accd5feeaaa4a0c0b6 "pdflatex"
-  "BaoCaoStickDiagram.out" 1744601415.6654 835 710c5801e6ff95a08bb90f38f2d30adb "pdflatex"
-  "BaoCaoStickDiagram.tex" 1744601414.73739 3122 098d9178b46dd09f158c3c36ee6434c2 ""
-  "BaoCaoStickDiagram.toc" 1744601415.6654 517 128357e45b3e14392ee1e5f00f24345f "pdflatex"
+  "BaoCaoStickDiagram.aux" 1744619855.04992 2245 31bf047506bd106ab4519d81a84b757a "pdflatex"
+  "BaoCaoStickDiagram.out" 1744619855.05092 3242 eeffa9c727093f180378da995b02243c "pdflatex"
+  "BaoCaoStickDiagram.tex" 1744619851.83988 4462 cb49e58a4a5023e14eadae56c559c7aa ""
+  "BaoCaoStickDiagram.toc" 1744619855.05092 1405 269745087e045b41f048695dfad222b8 "pdflatex"
   (generated)
   "BaoCaoStickDiagram.aux"
   "BaoCaoStickDiagram.log"

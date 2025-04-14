@@ -15,11 +15,15 @@
 \usepackage{everypage-1x}
 \usepackage{atbegshi}
 \usepackage{eso-pic}
-
+\usepackage{enumitem}
 
 \geometry{left=2cm,right=1.5cm,top=2cm,bottom=2.5cm}
 \onehalfspacing
 
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\renewcommand{\theparagraph}{\thesubsubsection.\arabic{paragraph}}
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titleformat{\section}{\bfseries\large}{\thesection}{1em}{}
 \titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{1em}{}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -27,7 +31,9 @@
 \renewcommand{\cftsecpagefont}{\normalfont}
 \renewcommand{\cfttoctitlefont}{\normalfont\bfseries\Large}
 \renewcommand{\cftaftertoctitle}{\hfill}
-
+\renewcommand{\thesection}{\Roman{section}} % Section: La Mã
+\renewcommand{\thesubsection}{\arabic{subsection}} % Subsection: 1, 2, 3...
+\renewcommand{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}} % Subsubsection: 1.1, 2.1,...
 % Vẽ khung cho trang bìa
 \AddToShipoutPictureBG*{%
     \AtPageLowerLeft{%
@@ -87,20 +93,47 @@
 % Nội dung
 %----------------------------------
 
-\section{Giới thiệu}
+%I.
+\section{Tổng quát}
 Viết phần giới thiệu ở đây.
 
-\section{Nội dung chính}
+%II.
+\section{Quy trình thực hiện}
 
-\subsection{Phân tích thuật toán}
+%1.
+\subsection{Tìm hiểu thuật toán}
 Chi tiết cho phần phân tích, ví dụ: mô hình hóa schematic diagram, tìm đường đi Euler/Hamilton, mô tả cách sử dụng graph.
-
-\subsection{Hiện thực bằng Python}
+%2.
+\subsection{Hiện thực bằng Python và C++}
 Viết mô tả cách cài đặt bằng Python, sử dụng thư viện matplotlib, networkx,... để vẽ đồ thị, stick diagram, các đoạn code chính.
-
+%2.1
+\subsubsection{Vẽ Schematic và tìm đường đi Euler trên C++}
+%2.1.1
+\paragraph{Hướng tiếp cận}
+%2.1.2
+\paragraph{Tạo đồ thị mô hình hóa NMOS pull-down network và tìm đường đi Euler}
+%a. và b.
+\begin{enumerate}[label=\alph*.]
+\item{Tạo đồ thị mô hình hóa NMOS pull-down network}
+\item{Tìm đường đi Euler cho vùng NMOS pull-down network}
+\end{enumerate}
+%2.1.3
+\paragraph{Tạo đồ thị mô hình hóa PMOS pull-up network và tìm đường đi Euler}
+%a. và b.
+\begin{enumerate}[label=\alph*.]
+    \item{Tạo đồ thị mô hình hóa NMOS pull-down network}
+    \item{Tìm đường đi Euler cho vùng NMOS pull-down network}
+\end{enumerate}
+%2.1.4
+\paragraph{Tìm điểm nối nguồn và output}
+%2.1.5
+\paragraph{Tổng kết mô hình hóa biểu thức Boolean sang Schematic Diagram}
+%2.2
+\subsubsection{Vẽ Stick Diagram trên Python}
+%3.
 \subsection{Kết quả mô phỏng}
 Chèn hình ảnh stick diagram được vẽ ra và mô tả kết quả.
-
+%III.
 \section{Tổng kết}
 Viết phần kết luận, tổng hợp những gì đạt được và những điểm còn hạn chế.
 \end{document}
