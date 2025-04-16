@@ -1,6 +1,0 @@
-NMOS
-parallel + E
-PMOS
-parallel A B
-parallel C D
-parallel E
