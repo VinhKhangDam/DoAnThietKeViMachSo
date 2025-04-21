@@ -31,8 +31,9 @@ def draw_stick_diagram(g_nmos, g_pmos, euler_path_nmos, euler_path_pmos,
     ax.plot([-3.5, 13], [5, 5], 'y-', linewidth=2)
     ax.plot([-3.5, 13], [0, 0], 'g-', linewidth=2)
 
+    # Draw logic elements
     for i, element in enumerate(logic_elements):
-        x = 1.5 + i * 2
+        x = 1.5 + i * 2 
         ax.plot([x, x], [-0.5, 5.5], 'r-')
         ax.text(x, 5.6, element, horizontalalignment='center', fontsize=10, color='black')
 
@@ -62,8 +63,21 @@ def draw_stick_diagram(g_nmos, g_pmos, euler_path_nmos, euler_path_pmos,
             x2, y2 = coordinates_nmos[v]
             ax.plot([x1, x2], [y1, y2], 'b-')
 
+    # Ensure that NMOS nodes are shown correctly
+    for node in g_nmos.nodes():
+        if node not in coordinates_nmos:  # Ensure every NMOS node appears
+            x = 1 + len(coordinates_nmos)
+            coordinates_nmos[node] = (x, 0)
+            ax.text(x, 0.1, node, horizontalalignment='center', fontsize=10, color='red')
+
     # Draw OUT
     ax.text(12, 2.5, 'Y', horizontalalignment='center', fontsize=15, color='red')
+
+    # Draw nodes A, B, C, D, E below NMOS
+    nodes_below_nmos = ['A', 'B', 'C', 'D', 'E']
+    for i, node in enumerate(nodes_below_nmos):
+        x = 1 + i * 2  # Adjust spacing between nodes
+        ax.text(x+0.5, -0.75, node, horizontalalignment='center', fontsize=10, color='black')  # Position below NMOS
 
     ax.axis('off')
     plt.show()

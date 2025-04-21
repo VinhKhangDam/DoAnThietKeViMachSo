@@ -21,28 +21,26 @@ int LogicExpression::precedence(char op) {
 void LogicExpression::parse() {
     std::stack<char> ops;
     std::vector<std::string> tokens;
-
-    // ==== Tokenizer nâng cao ====
     std::string current;
-    for (size_t i = 0; i < expression.size(); ++i) {
-        char ch = expression[i];
+
+    for (char ch : expression) {
         if (isalnum(ch)) {
             current += ch;
         } else {
             if (!current.empty()) {
                 tokens.push_back(current);
+                variables.insert(current);  // Thêm biến vào tập hợp
                 current.clear();
             }
             if (ch == '+' || ch == '*' || ch == '(' || ch == ')') {
                 tokens.push_back(std::string(1, ch));
-            } else if (!isspace(ch)) {
-                std::cerr << "Invalid character in expression: '" << ch << "'\n";
-                return;
             }
         }
     }
-    if (!current.empty()) tokens.push_back(current);
-
+    if (!current.empty()) {
+        tokens.push_back(current);
+        variables.insert(current);  // Thêm biến cuối cùng
+    }
     // ==== Infix to Postfix (Shunting Yard) ====
     for (const auto& token : tokens) {
         if (isalnum(token[0])) {
@@ -82,90 +80,38 @@ void LogicExpression::parse() {
 }
 
 void LogicExpression::buildNMOS() {
-    std::stack<std::vector<std::string>> stack;
-    std::unordered_map<std::string, int> varCount;
-    auto fresh_name = [&](const std::string& var) {
-        return var + "_" + std::to_string(varCount[var]++);
-    };
+    std::set<std::string> created;  // Đảm bảo mỗi biến chỉ tạo node một lần
 
     for (const auto& token : postfix) {
-        if (isalnum(token[0])) {
-            std::string vname = fresh_name(token);
-            g_nmos.addNode(vname + "S");
-            g_nmos.addNode(vname + "D");
-            g_nmos.addEdge(vname + "S", vname + "D");
-            stack.push({vname});
-        } else if (token == "+" || token == "*") {
-            if (stack.size() < 2) {
-                std::cerr << "Invalid expression (not enough operands for '" << token << "')\n";
-                return;
-            }
-            auto b = stack.top(); stack.pop();
-            auto a = stack.top(); stack.pop();
-            std::vector<std::string> result;
-            if (token == "+") {
-                for (const auto& x : a) {
-                    for (const auto& y : b) {
-                        g_nmos.addEdge(x + "S", y + "S");
-                        g_nmos.addEdge(x + "D", y + "D");
-                    }
-                }
-            } else if (token == "*") {
-                for (const auto& x : a) {
-                    for (const auto& y : b) {
-                        g_nmos.addEdge(x + "D", y + "S");
-                    }
-                }
-            }
-            result.insert(result.end(), a.begin(), a.end());
-            result.insert(result.end(), b.begin(), b.end());
-            stack.push(result);
+        if (isalnum(token[0]) && created.insert(token).second) {
+            std::string dNode = token + "_D";  // NMOS Drain node
+            std::string sNode = token + "_S";  // NMOS Source node
+            g_nmos.addNode(token);            // Tạo node chỉ là "A", "B", "C", ...
+            g_nmos.addNode(dNode);            // Tạo node "A_D", "B_D", "C_D", ...
+            g_nmos.addNode(sNode);            // Tạo node "A_S", "B_S", "C_S", ...
+            g_nmos.addEdge(dNode, sNode);     // Kết nối NMOS: D -> S
         }
     }
 }
+
+
+
 
 void LogicExpression::buildPMOS() {
-    std::stack<std::vector<std::string>> stack;
-    std::unordered_map<std::string, int> varCount;
-    auto fresh_name = [&](const std::string& var) {
-        return var + "_" + std::to_string(varCount[var]++);
-    };
+    std::set<std::string> created;  // Đảm bảo mỗi biến chỉ tạo node một lần
 
     for (const auto& token : postfix) {
-        if (isalnum(token[0])) {
-            std::string vname = fresh_name(token);
-            g_pmos.addNode(vname + "S");
-            g_pmos.addNode(vname + "D");
-            g_pmos.addEdge(vname + "S", vname + "D");
-            stack.push({vname});
-        } else if (token == "+" || token == "*") {
-            if (stack.size() < 2) {
-                std::cerr << "Invalid expression (not enough operands for '" << token << "')\n";
-                return;
-            }
-            auto b = stack.top(); stack.pop();
-            auto a = stack.top(); stack.pop();
-            std::vector<std::string> result;
-            if (token == "*") {
-                for (const auto& x : a) {
-                    for (const auto& y : b) {
-                        g_pmos.addEdge(x + "S", y + "S");
-                        g_pmos.addEdge(x + "D", y + "D");
-                    }
-                }
-            } else if (token == "+") {
-                for (const auto& x : a) {
-                    for (const auto& y : b) {
-                        g_pmos.addEdge(x + "D", y + "S");
-                    }
-                }
-            }
-            result.insert(result.end(), a.begin(), a.end());
-            result.insert(result.end(), b.begin(), b.end());
-            stack.push(result);
+        if (isalnum(token[0]) && created.insert(token).second) {
+            std::string sNode = token + "_S";  // PMOS Source node
+            std::string dNode = token + "_D";  // PMOS Drain node
+            g_pmos.addNode(token);             // Tạo node chỉ là "A", "B", "C", ...
+            g_pmos.addNode(sNode);             // Tạo node "A_S", "B_S", "C_S", ...
+            g_pmos.addNode(dNode);             // Tạo node "A_D", "B_D", "C_D", ...
+            g_pmos.addEdge(sNode, dNode);      // Kết nối PMOS: S -> D
         }
     }
 }
+
 
 void LogicExpression::exportData(const std::string& dir) {
     std::ofstream f1(dir + "/edges_nmos.txt");
@@ -177,8 +123,13 @@ void LogicExpression::exportData(const std::string& dir) {
     std::ofstream f3(dir + "/logic_elements.txt");
     std::set<std::string> seen;
     for (auto& node : g_nmos.getNodes()) {
-        std::string base = node.substr(0, node.size() - 1); // remove S/D
+        std::string base = node;
+        // Kiểm tra và loại bỏ hậu tố "_S" hoặc "_D" nếu có
+        if (base.size() > 2 && (base.substr(base.size() - 2) == "_S" || base.substr(base.size() - 2) == "_D")) {
+            base = base.substr(0, base.size() - 2);
+        }
         if (seen.insert(base).second)
             f3 << base << "\n";
     }
 }
+
