@@ -140,14 +140,54 @@ Phân công công việc:
 • PMOS pull-up network\\
 • NMOS pull-down network\\
 • Input, output, GND và VDD\\
-Ví dụ: \( Y = \overline{A *(B + C) + D * E} \)
+Ví dụ: \( Y = \overline{A *(B + C) + D * E} \)\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../PNG/ViDuSchematic.jpg}
+    \label{fig:Ex_Schematic}\\
+\end{figure}
+
+Tiếp theo, chúng ta cần tìm đường đi Euler của schematic diagram cho cùng NMOS pull-down và PMOS pull-up.\\
+Ở đây, chúng ta sẽ tìm đường đi Euler cho vùng PMOS pull-up đầu tiên và sau đó cho vùng NMOS pull-down sẽ giống với PMOS tìm được.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../PNG/Euler_CMOS.jpg}
+    \label{fig:Ex_Schematic}\\
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{../PNG/Euler_alone.jpg}
+    \label{fig:Ex_Schematic}\\
+\end{figure}
+
+Cuối cùng, ta sẽ vẽ Stick Diagram từ đường đi Euler đã tìm được.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../PNG/Stick_handwrite.jpg}
+    \label{fig:Ex_Schematic}\\
+\end{figure}
+
+Như vậy, thuật toán để biểu diễn stick diagram từ biểu thức Boolean là:\\
+\textbf{Vẽ schematic diagram -> Tìm đường đi Euler -> Vẽ stick diagram}.
+\newpage
 %2.
 \subsection{Hiện thực bằng Python và C++}
-Viết mô tả cách cài đặt bằng Python, sử dụng thư viện matplotlib, networkx,... để vẽ đồ thị, stick diagram, các đoạn code chính.
 %2.1
 \subsubsection{Vẽ Schematic và tìm đường đi Euler trên C++}
+Đây là phần khó nhất của bài tập, vì từ một biểu thức Boolean, ta có thể vẽ được rất nhiều trường hợp của stickdiagram.
+Nhưng đối với yêu cầu của bài toán, ta phải vẽ được trường hợp của stick diagram của biểu thức Boolean được nhập từ bàn phím
+sao cho vùng NMOS pull-down và PMOS pull-up có chung đường đi Euler.
 %2.1.1
 \paragraph{Hướng tiếp cận}
+Không thể vẽ schematic diagram 1 cách trực tiếp từ biểu thức Boolean.
+Thay vào đó, ta sẽ sử dụng đồ thị (Graph) để mô hình hóa schematic diagram.\\
+Vì schematic diagram gồm 2 vùng là NMOS pull-down network và PMOS pull-up network, nên ta sẽ tạo 2 đồ thị tương ứng với 2 vùng này, 
+với node là các biến đầu vào của Boolean.\\
+Ví dụ: \( Y = \overline{A *(B + C) + D * E} \) thì Node sẽ là:
+\textbf{A, B, C, D, E}\\
 %2.1.2
 \paragraph{Tạo đồ thị mô hình hóa NMOS pull-down network và tìm đường đi Euler}
 %a. và b.
