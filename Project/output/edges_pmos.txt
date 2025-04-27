@@ -1,5 +1,0 @@
-A_D A_S
-B_D B_S
-C_D C_S
-D_D D_S
-E_D E_S
