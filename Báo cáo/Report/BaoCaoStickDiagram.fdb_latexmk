@@ -1,12 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1745499150.34781 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAnThietKeViMachSo/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1745499151.24268 0
+["pdflatex"] 1745849590.88883 "/home/vinhkhang/Documents/ThietKeViMachSo/DoAnThietKeViMachSo/Báo cáo/Report/BaoCaoStickDiagram.tex" "BaoCaoStickDiagram.pdf" "BaoCaoStickDiagram" 1745849591.81643 0
   "../PNG/CE.png" 1745336111.55545 33593 6b4bbe96270eea2e8815b3fec1e6abd0 ""
   "../PNG/Euler_CMOS.jpg" 1745336111.55745 675338 3771f9dd342e020bf353f74be5526685 ""
   "../PNG/Euler_alone.jpg" 1745336111.56045 639616 f8a13120a4351f778b02414318a1fee3 ""
   "../PNG/Stick_handwrite.jpg" 1745336111.56345 606588 6eb9a7327851b2a026eb1f44f373a2e2 ""
   "../PNG/ViDuSchematic.jpg" 1745336111.56545 552991 4baa8fbefbb4714d667229bb9f4e480d ""
   "/etc/texmf/web2c/texmf.cnf" 1743478725.82846 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAnThietKeViMachSo/Báo cáo/Report/BaoCaoStickDiagram.tex" 1745499150.1212 9250 090f9231b9bbefcc02d8e545948e102f ""
+  "/home/vinhkhang/Documents/ThietKeViMachSo/DoAnThietKeViMachSo/Báo cáo/Report/BaoCaoStickDiagram.tex" 1745849589.71356 9217 939c32ebd4bbbbfc44dfe54eecbf3a3d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -194,10 +194,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1744557503.50864 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1744557632 8214513 fe20233ff23398c24e0c257122c351dd ""
-  "BaoCaoStickDiagram.aux" 1745499151.14217 3209 bdc95cd88159b00aa40c57fecf33db83 "pdflatex"
-  "BaoCaoStickDiagram.out" 1745499151.14317 4651 b9c4d0e34191ededa3fa30b1a0357651 "pdflatex"
-  "BaoCaoStickDiagram.tex" 1745499150.1212 9250 090f9231b9bbefcc02d8e545948e102f ""
-  "BaoCaoStickDiagram.toc" 1745499151.14317 1877 0e0ce89e74514208c56abc3c85560dd1 "pdflatex"
+  "BaoCaoStickDiagram.aux" 1745849591.70766 3204 da57f6c65a7cee2dc77185d53db2db6b "pdflatex"
+  "BaoCaoStickDiagram.out" 1745849591.70867 4622 5dac3cc95d90c788b3abf6cd152d83e9 "pdflatex"
+  "BaoCaoStickDiagram.tex" 1745849589.71356 9217 939c32ebd4bbbbfc44dfe54eecbf3a3d ""
+  "BaoCaoStickDiagram.toc" 1745849591.70867 1872 1b78f52e32b3a9868586e3cf49be39d8 "pdflatex"
   (generated)
   "BaoCaoStickDiagram.aux"
   "BaoCaoStickDiagram.log"
