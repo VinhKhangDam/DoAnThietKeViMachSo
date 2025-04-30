@@ -3,7 +3,7 @@ from draw import *
 
 print("Enter Boolean Expression: ")
 expression = input()
-g_nmos, g_pmos, euler_path_nmos, euler_path_pmos, source_nodes_nmos, out_nodes_nmos,source_nodes_pmos, out_nodes_pmos = Create_All(expression)
+g_nmos, g_pmos, euler_path_nmos, euler_path_pmos, source_nodes_nmos, out_nodes_nmos,source_nodes_pmos, out_nodes_pmos = CreateAll(expression)
 logic_elements = createLogicElement(euler_path_nmos)
 print("Euler path PMOS: ", euler_path_pmos)
 print("Euler path NMOS: ", euler_path_nmos)

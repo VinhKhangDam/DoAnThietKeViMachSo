@@ -10,23 +10,23 @@ def OperatorPrecedence(operator):
         return 2
     else:
         return 0
-
+    
+#Áp dụng toán tử cho 2 toán hạng
 def ApplyForOperand(operand1, operand2, operator, q):
     expression = str(operand1) + str(operator) + str(operand2)
-    #q.append(expression)
     if operator == '+':
         return str(operand1) + str(operator) + str(operand2)
     else: return str(operand1) + str(operator) + str(operand2)
 
+#Áp dụng toán tử đảo cho 2 toán hạng
 def ApplyForOperand_inv(operand1, operand2, operator):
     expression = str(operand1) + str(operator) + str(operand2)
-    #q.append(expression)
     if operator == '+':
         return str(operand1) + '*' + str(operand2)
     else: return str(operand1) + '+' + str(operand2)
 
-
-def evaluate_expression_inv(expression, q):
+#Đánh giá biểu thức với toán tử ngược
+def EvaluateExpression_inv(expression, q):
     operand_stack = []
     operator_stack = []
     index = 0
@@ -72,7 +72,8 @@ def evaluate_expression_inv(expression, q):
 
     return operand_stack.pop()
 
-def evaluate_expression(expression, q):
+#Đánh giá biểu thức với tạo biểu thức con
+def EvaluateExpression(expression, q):
     operand_stack = []
     operator_stack = []
     index = 0
@@ -119,7 +120,8 @@ def evaluate_expression(expression, q):
 
     return operand_stack.pop()
 
-def subtract_expressions(expression1, expression2):
+#Trừ 2 biểu thức
+def Sub_Expression(expression1, expression2):
     i = 0
     j = 0
     result = ''
@@ -136,7 +138,9 @@ def subtract_expressions(expression1, expression2):
         i += 1
     
     return result
-def intersection_expressions(expression1, expression2):
+
+#Tìm phần giao của 2 biểu thức
+def Intersection_Expression(expression1, expression2):
     i = 0
     j = 0
     result =''
@@ -150,7 +154,9 @@ def intersection_expressions(expression1, expression2):
 #    if not result: return 0
     return result
 
-def check_serial_connected(g, token, inter_arr):
+#Check Connect
+#Kiểm tra kết nối nối tiếp
+def CheckSerial(g, token, inter_arr):
     if len(inter_arr) == 0:
         return True
     arr1 = [0] * len(inter_arr)
@@ -202,8 +208,9 @@ def check_serial_connected(g, token, inter_arr):
                 j += 1
             i += 1
         return True
-    
-def checking_parallel_connected(g, k, inter_arr):
+
+#Kiểm tra kết nối song song  
+def CheckParallel(g, k, inter_arr):
     if len(inter_arr) == 0:
         return True
     arr1 = []
@@ -244,7 +251,10 @@ def checking_parallel_connected(g, k, inter_arr):
                 j += 1
             i += 1
         return True
-def create_node(g, node):
+
+#Tạo và thao tác đồ thị    
+#Tạo node
+def CreateNode(g, node):
     node1 = node + 'S'
     node2 = node + 'D'
     g.add_node(node1)
@@ -252,7 +262,7 @@ def create_node(g, node):
     g.add_edge(node1, node2)
 
 
-def add_edge_parallel_1(g, node1, node2):
+def ParalleEdge_1(g, node1, node2):
     n1 = node1 + 'S'
     n2 = node1 + 'D'
     n3 = node2 + 'S'
@@ -261,7 +271,7 @@ def add_edge_parallel_1(g, node1, node2):
     g.add_edge(n2, n4)
     
 
-def add_edge_serial_1(g, node1, node2, inter_arr, mode):
+def SerialEdge_1(g, node1, node2, inter_arr, mode):
     n1 = node1 + 'S'
     n2 = node1 + 'D'
     n3 = node2 + 'S'
@@ -270,15 +280,15 @@ def add_edge_serial_1(g, node1, node2, inter_arr, mode):
         g.add_edge(n3, n2)
     elif mode == 1:
         arr = [node1, 0, node2, 0];
-        if check_serial_connected(g, ' ',arr) == True:
+        if CheckSerial(g, ' ',arr) == True:
             g.add_edge(n3, n2)
 
-def add_edge_serial_2(g, node, inter_arr, mode):
+def SerialEdge_2(g, node, inter_arr, mode):
     n1 = node + 'S'
     n2 = node + 'D'
     i = j = 0
-    node_connect1, node_degree1, i = lowest_degree_arr_node(g, 'D', i, inter_arr, '')
-    node_connect2, node_degree2, j = lowest_degree_arr_node(g, 'S', j, inter_arr, '')
+    node_connect1, node_degree1, i = LowestDegreeNode(g, 'D', i, inter_arr, '')
+    node_connect2, node_degree2, j = LowestDegreeNode(g, 'S', j, inter_arr, '')
     if mode == 0:
         g.add_edge(n1, node_connect1)
         for node in g.nodes():
@@ -286,12 +296,12 @@ def add_edge_serial_2(g, node, inter_arr, mode):
             if (node_connect1, node) in g.edges() and node[1] == 'D':
                 g.add_edge(n1, node)
     elif mode == 1:
-        if check_serial_connected(g, node, inter_arr) == True:
+        if CheckSerial(g, node, inter_arr) == True:
             g.add_edge(n2, node_connect2)
 
 
 
-def add_edge_parallel_2(g, node, inter_arr):
+def ParallelEdge_2(g, node, inter_arr):
     n1 = node + 'S'
     n2 = node + 'D'
     outside_node = ''
@@ -300,8 +310,8 @@ def add_edge_parallel_2(g, node, inter_arr):
         if n not in inter_arr and n != node:
             outside_node = n
             break
-    node1 = lowest_degree(g, 'S', node, node, outside_node)
-    node2 = lowest_degree(g, 'D', node, node, outside_node)
+    node1 = LoweseDegree(g, 'S', node, node, outside_node)
+    node2 = LoweseDegree(g, 'D', node, node, outside_node)
     node1_degree = g.degree(node1)
     node2_degree = g.degree(node2)
     if node1_degree < node2_degree:
@@ -312,33 +322,33 @@ def add_edge_parallel_2(g, node, inter_arr):
         g.add_edge(n2, node2)
     if s == 1:
         node1 = node1[0]
-        node_connect = lowest_degree(g, 'D', node, node1, outside_node)
+        node_connect = LoweseDegree(g, 'D', node, node1, outside_node)
         g.add_edge(n2, node_connect)
     elif s == 2:
         node2 = node2[0]
-        node_connect = lowest_degree(g, 'S', node, node2, outside_node)
+        node_connect = LoweseDegree(g, 'S', node, node2, outside_node)
         g.add_edge(n1, node_connect)
 
-def add_edge_parallel_3(g, inter_arr, mode):
+def ParallelEdge_3(g, inter_arr, mode):
     i = 0
     j = 0
     n1 = n2 = n3 = n4 = ''
     n1_degree = n2_degree = n3_degree = n4_degree = 0
-    n1, n1_degree, i = lowest_degree_arr_node(g, 'S', i, inter_arr, '')
+    n1, n1_degree, i = LowestDegreeNode(g, 'S', i, inter_arr, '')
     t1 = i
-    n2, n2_degree, i = lowest_degree_arr_node(g, 'S', i, inter_arr, '')
-    n3, n3_degree, j = lowest_degree_arr_node(g, 'D', j, inter_arr, '')
-    n4, n4_degree, j = lowest_degree_arr_node(g, 'D', j, inter_arr, '')
+    n2, n2_degree, i = LowestDegreeNode(g, 'S', i, inter_arr, '')
+    n3, n3_degree, j = LowestDegreeNode(g, 'D', j, inter_arr, '')
+    n4, n4_degree, j = LowestDegreeNode(g, 'D', j, inter_arr, '')
     sel = 3
     if n1_degree + n2_degree < n3_degree + n4_degree :
-        if checking_parallel_connected(g, 'S', inter_arr) == True and mode == 1:
+        if CheckParallel(g, 'S', inter_arr) == True and mode == 1:
             sel = 0
             g.add_edge(n1, n2)      #S->S
         elif mode == 0:
             sel = 0
             g.add_edge(n1, n2)      #S->S
     else:
-        if checking_parallel_connected(g, 'D', inter_arr) == True and mode == 1:
+        if CheckParallel(g, 'D', inter_arr) == True and mode == 1:
             sel = 1
             g.add_edge(n3, n4)      #D->D
         elif mode == 0:
@@ -346,18 +356,18 @@ def add_edge_parallel_3(g, inter_arr, mode):
             g.add_edge(n3, n4)      #D->D
     if sel == 1 :   #connect S -> S
         except_node = n4[0]
-        node_connect, node_degree, t1 = lowest_degree_arr_node(g, 'S', t1, inter_arr, except_node)
+        node_connect, node_degree, t1 = LowestDegreeNode(g, 'S', t1, inter_arr, except_node)
         g.add_edge(n1, node_connect)
     elif sel == 2:           #connect d->D
         except_node = n2[0]
-        node_connect, node_degree, t1 = lowest_degree_arr_node(g, 'D', t1, inter_arr, except_node)
+        node_connect, node_degree, t1 = LowestDegreeNode(g, 'D', t1, inter_arr, except_node)
         g.add_edge(n3, node_connect)
     return
 
-def add_edge_serial_3(g, inter_arr, mode):
+def SerialEdge_3(g, inter_arr, mode):
     i = 0
-    n1, n1_degree, i = lowest_degree_arr_node(g, 'S', i, inter_arr, '')
-    n2 , n2_degree, i = lowest_degree_arr_node(g, 'D', i, inter_arr, n1)
+    n1, n1_degree, i = LowestDegreeNode(g, 'S', i, inter_arr, '')
+    n2 , n2_degree, i = LowestDegreeNode(g, 'D', i, inter_arr, n1)
     if mode == 0:
         g.add_edge(n1, n2)
         for node in g.nodes():
@@ -366,11 +376,11 @@ def add_edge_serial_3(g, inter_arr, mode):
             if (node, n2) in g.edges() and node[1] == 'D':
                 g.add_edge(node, n1)
     elif mode == 1:
-        if check_serial_connected(g, '', inter_arr) == True:
+        if CheckSerial(g, '', inter_arr) == True:
            g.add_edge(n1, n2) 
     
-
-def lowest_degree_arr_node(g, k, i, inter_arr, except_node):
+#Tìm node có bậc thấp nhất
+def LowestDegreeNode(g, k, i, inter_arr, except_node):
     t = i
     min_degree1 = 100
     min_degree2 = 100
@@ -386,7 +396,7 @@ def lowest_degree_arr_node(g, k, i, inter_arr, except_node):
         t += 1
     return min_node1, min_degree1, t
 
-def lowest_degree(g, k, except_node1, except_node2, except_node3):
+def LoweseDegree(g, k, except_node1, except_node2, except_node3):
     degrees = dict(g.degree())
     if except_node1 != '':
         degrees.pop(except_node1 + 'S', None)
@@ -401,20 +411,21 @@ def lowest_degree(g, k, except_node1, except_node2, except_node3):
     lowest_degree_node = min(filtered_degrees, key=degrees.get)
     return lowest_degree_node
 
-def create_graph(g, q, i, expression, mode):
+#Tạo đồ thị từ biểu thức
+def CreateGraph(g, q, i, expression, mode):
     end_node = ''
     inter_arr = []
     t = i - 1
     expre = expression
     while t >= 0:
         element = q[t]
-        inter = intersection_expressions(expre, element)
+        inter = Intersection_Expression(expre, element)
         if len(inter) > 0:
             for char in inter:
                 if char.isalpha():
                     inter_arr.append(char)
             inter_arr.append(0)
-        remain = subtract_expressions(expre, element)
+        remain = Sub_Expression(expre, element)
         if len(remain) > 0:
             expre = remain
         t -= 1
@@ -422,7 +433,7 @@ def create_graph(g, q, i, expression, mode):
         sel = 0
         for token in expression:
             if token.isalpha():
-                create_node(g, token)
+                CreateNode(g, token)
                 if sel == 0:
                    sel = 1
                    node1 = token
@@ -433,9 +444,9 @@ def create_graph(g, q, i, expression, mode):
                 operator = OperatorPrecedence(token)
                 
         if operator == 1:
-            add_edge_parallel_1(g, node1, node2)
+            ParalleEdge_1(g, node1, node2)
         else:
-            add_edge_serial_1(g, node1, node2, inter_arr, mode)
+            SerialEdge_1(g, node1, node2, inter_arr, mode)
 
     else:
         node = ''
@@ -445,33 +456,35 @@ def create_graph(g, q, i, expression, mode):
                 operator = OperatorPrecedence(token)
             elif token.isalpha():
                 node = token
-                create_node(g, token)
+                CreateNode(g, token)
         if operator == 1:
             if len(node) > 0:
-                add_edge_parallel_2(g, node, inter_arr)
+                ParallelEdge_2(g, node, inter_arr)
             else:
-                add_edge_parallel_3(g, inter_arr, mode)
+                ParallelEdge_3(g, inter_arr, mode)
         else:
             if len(node):
-                add_edge_serial_2(g, node, inter_arr, mode)
+                SerialEdge_2(g, node, inter_arr, mode)
             else:
-                add_edge_serial_3(g, inter_arr, mode)
+                SerialEdge_3(g, inter_arr, mode)
         end_node = node
     return g, end_node
 
-def create_nmos(g, expression):
+#Tạo NMOS
+def CreateNMOS(g, expression):
     q = []
     end_node = ''
-    evaluate_expression(expression, q)
+    EvaluateExpression(expression, q)
     i = 0
     while i < len(q):
-        g, end_node = create_graph(g, q, i, q[i], 0)
+        g, end_node = CreateGraph(g, q, i, q[i], 0)
         i += 1
     return g, end_node
 
-def create_pmos(g, expression, euler_path):
+#Tạo PMOS
+def CreatePMOS(g, expression, euler_path):
     q = []
-    evaluate_expression_inv(expression, q)
+    EvaluateExpression_inv(expression, q)
     i = 0
     while i < len(euler_path):
         n1 = euler_path[i]
@@ -482,11 +495,12 @@ def create_pmos(g, expression, euler_path):
         i += 1
     i = 0
     while i < len(q):
-        create_graph(g, q, i, q[i], 1)
+        CreateGraph(g, q, i, q[i], 1)
         i += 1
     return g
 
-def is_valid_next_node(v, path, G):
+#Kiểm tra node tiếp theo có hợp lệ không
+def isValidNextMode(v, path, G):
     # Kiểm tra xem đỉnh v đã được thêm vào path chưa
     if v in path:
         return False
@@ -509,39 +523,40 @@ def is_valid_next_node(v, path, G):
         return True
     return False
 
-
-def hamiltonian_dfs_endnode(G, start, end, path=[]):
+#Tìm đường đi Hamilton bằng DFS
+def Hamilton_DFS_EndNode(G, start, end, path=[]):
     path = path + [start]
     if len(path) == len(G.nodes()):
         return path
     for v in G.neighbors(start):
-        if is_valid_next_node(v, path, G):
-            new_path = hamiltonian_dfs_endnode(G, v, end, path)
+        if isValidNextMode(v, path, G):
+            new_path = Hamilton_DFS_EndNode(G, v, end, path)
             if new_path:
                 return new_path
     return None
 
-def hamiltonian_dfs(G, start, path=[]):
+def Hamilton_DFS(G, start, path=[]):
     path = path + [start]
     if len(path) == len(G.nodes()):
         return path
     for v in G.neighbors(start):
-        if is_valid_next_node(v, path, G):
-            new_path = hamiltonian_dfs(G, v, path)
+        if isValidNextMode(v, path, G):
+            new_path = Hamilton_DFS(G, v, path)
             if new_path:
                 return new_path
     return None
 
-def find_hamilton_path(g, end_node):
+#Tìm đường đi Hamilton với node kết thúc xác định
+def FindHamilton(g, end_node):
     path = []
     for node in g.nodes():
         if node[1] == 'S': continue
         if end_node != '':
-            path = hamiltonian_dfs_endnode(g, node, end_node)
+            path = Hamilton_DFS_EndNode(g, node, end_node)
             if path:
                 if (path[0][0] != end_node and path[-1][0] != end_node):
                     path = []
-        else:  path = hamiltonian_dfs(g, node)
+        else:  path = Hamilton_DFS(g, node)
         if path :
             break
         path = []
@@ -551,17 +566,19 @@ def find_hamilton_path(g, end_node):
         for node in g.nodes():
             if node[1] == 'D': continue
             if end_node != '':
-                path = hamiltonian_dfs_endnode(g, node, end_node)
+                path = Hamilton_DFS_EndNode(g, node, end_node)
                 if path:
                     if (path[0][0] != end_node and path[-1][0] != end_node):
                         path = []
-            else:  path = hamiltonian_dfs(g, node)
+            else:  path = Hamilton_DFS(g, node)
             if path :
                 break
             path = []
     return path
+
+#Tạo đường đi Euler từ đường đi Hamilton
 def euler_path(g, end_node):
-    euler_path_nmos = find_hamilton_path(g, end_node)
+    euler_path_nmos = FindHamilton(g, end_node)
     if not euler_path_nmos:
         return None
     euler_path_pmos = [None] * len(euler_path_nmos)
@@ -578,7 +595,8 @@ def euler_path(g, end_node):
         i += 2
     return euler_path_nmos, euler_path_pmos
 
-def filter_edge_pmos(g, arr1, arr2, euler_path):
+#Lọc các cạnh trong đồ thị PMOS
+def FilterEdge_PMOS(g, arr1, arr2, euler_path):
     i = 0
     check_serial = []
     check_parallel = []
@@ -640,7 +658,8 @@ def filter_edge_pmos(g, arr1, arr2, euler_path):
                                 g.remove_edge(n1 + n[2], n2 + n[2])
     return g
 
-def checking_edge(g, full_node, char_connected):
+#Kiểm tra cạnh
+def CheckEdge(g, full_node, char_connected):
     for node in g.nodes():
         if node[0] == full_node[0] : continue
         if char_connected == '':
@@ -652,7 +671,8 @@ def checking_edge(g, full_node, char_connected):
                     return False
     return True
 
-def find_node_source_and_out(g):
+#Tìm node nguồn và node đích
+def FindNode_SandD(g):
     source_nodes = []
     out_nodes = []
     for edge in g.edges():
@@ -671,7 +691,7 @@ def find_node_source_and_out(g):
             n2 = pair[1]
             n1_s = n1 + 'S'
             n2_s = n2 + 'S'
-            if checking_edge(g, n1_s, 'D') == False or checking_edge(g, n2_s, 'D') == False:
+            if CheckEdge(g, n1_s, 'D') == False or CheckEdge(g, n2_s, 'D') == False:
                 source_nodes.remove((n1, n2))
         if len(source_nodes) > 0:
             temp1 = []
@@ -697,7 +717,7 @@ def find_node_source_and_out(g):
             n2 = pair[1]
             n1_d = n1 + 'D'
             n2_d = n2 + 'D'
-            if checking_edge(g, n1_d, 'S') == False or checking_edge(g, n2_d, 'S') == False:
+            if CheckEdge(g, n1_d, 'S') == False or CheckEdge(g, n2_d, 'S') == False:
                 out_nodes.remove((n1, n2))
         if len(out_nodes) > 0:
             temp2 = []
@@ -719,13 +739,13 @@ def find_node_source_and_out(g):
         temp1.append(node)
 
     for node in temp1:
-        if checking_edge(g, node, '') == False:
+        if CheckEdge(g, node, '') == False:
             if node in source_nodes:
                 source_nodes.remove(node)
     if len(source_nodes) == 0:            
         for node in g.nodes():
             if node[1] == 'S':
-                if checking_edge(g, node, '') == True:
+                if CheckEdge(g, node, '') == True:
                     source_nodes.append(node)
     if len(source_nodes) == 0: source_nodes = temp1
 
@@ -733,36 +753,37 @@ def find_node_source_and_out(g):
     for node in out_nodes:
         temp2.append(node)
     for node in temp2:
-        if checking_edge(g, node, '') == False:
+        if CheckEdge(g, node, '') == False:
             if node in out_nodes:
                 out_nodes.remove(node)
     if len(out_nodes) == 0:
         for node in g.nodes():
             if node[1] == 'D':
-                if checking_edge(g, node, '') == True:
+                if CheckEdge(g, node, '') == True:
                     out_nodes.append(node)
     if len(out_nodes) == 0: out_nodes = temp2
                 
     return source_nodes, out_nodes
 
-'''def find_node_source_and_out(g):
+'''def FindNode_SandD(g):
     source_nodes = []
     out_nodes = []
     for node in g.nodes():
         if node[1] == 'S':
-            if checking_edge(g, node, 'D') == True:
+            if CheckEdge(g, node, 'D') == True:
                 source_nodes.append(node)
         else:
-            if checking_edge(g, node, 'S') == True:
+            if CheckEdge(g, node, 'S') == True:
                 out_nodes.append(node)
     return source_nodes, out_nodes'''
 
-def Create_All(expression):
+#Tạo đồ thị từ tất cả thành phần
+def CreateAll(expression):
     g_nmos = nx.Graph()
     g_pmos = nx.Graph()
     node = ''
-    g_nmos, node = create_nmos(g_nmos, expression)
-    source_nodes_nmos, out_nodes_nmos = find_node_source_and_out(g_nmos);
+    g_nmos, node = CreateNMOS(g_nmos, expression)
+    source_nodes_nmos, out_nodes_nmos = FindNode_SandD(g_nmos);
     serial_array_pmos = []
     parallel_array_pmos = []
     for edge in g_nmos.edges():
@@ -777,20 +798,13 @@ def Create_All(expression):
         else:
             parallel_array_pmos.append(n1 + n2)
     euler_path_nmos, euler_path_pmos = euler_path(g_nmos, node)
-    g_pmos = create_pmos(g_pmos, expression, euler_path_pmos)
-    g_pmos = filter_edge_pmos(g_pmos, serial_array_pmos, parallel_array_pmos, euler_path_pmos)
+    g_pmos = CreatePMOS(g_pmos, expression, euler_path_pmos)
+    g_pmos = FilterEdge_PMOS(g_pmos, serial_array_pmos, parallel_array_pmos, euler_path_pmos)
     #g_pmos.add_edge('AS', 'ED')
-    source_nodes_pmos, out_nodes_pmos = find_node_source_and_out(g_pmos);
+    source_nodes_pmos, out_nodes_pmos = FindNode_SandD(g_pmos);
     return g_nmos, g_pmos, euler_path_nmos, euler_path_pmos, source_nodes_nmos, out_nodes_nmos,source_nodes_pmos, out_nodes_pmos
 
 expression = "A*(B+C)+D*E"
-g_nmos, g_pmos, euler_path_nmos, euler_path_pmos, source_nodes_nmos, out_nodes_nmos,source_nodes_pmos, out_nodes_pmos = Create_All(expression)
+g_nmos, g_pmos, euler_path_nmos, euler_path_pmos, source_nodes_nmos, out_nodes_nmos,source_nodes_pmos, out_nodes_pmos = CreateAll(expression)
 
-# Test the function
-#Test expression:
-#A*(B+C)+D
-#(A+B*C)*D
-#(A+B+C)*D
-#A*B*C+D
-#A*B+C*D
-#(A+B)*(C+D)
+
