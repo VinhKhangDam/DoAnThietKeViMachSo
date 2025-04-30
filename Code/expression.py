@@ -1,6 +1,9 @@
 import networkx as nx
 
-def precedence(operator):
+#function: hỗ trợ xử lí biểu thức
+
+#OperatorPrecedence: Xác định độ ưu tiên của biểu thức 
+def OperatorPrecedence(operator):
     if operator == '+':
         return 1
     elif operator == '*':
@@ -8,14 +11,14 @@ def precedence(operator):
     else:
         return 0
 
-def apply_operator(operand1, operand2, operator, q):
+def ApplyForOperand(operand1, operand2, operator, q):
     expression = str(operand1) + str(operator) + str(operand2)
     #q.append(expression)
     if operator == '+':
         return str(operand1) + str(operator) + str(operand2)
     else: return str(operand1) + str(operator) + str(operand2)
 
-def apply_operator_inv(operand1, operand2, operator):
+def ApplyForOperand_inv(operand1, operand2, operator):
     expression = str(operand1) + str(operator) + str(operand2)
     #q.append(expression)
     if operator == '+':
@@ -34,11 +37,11 @@ def evaluate_expression_inv(expression, q):
             operand_stack.append((token))
             index += 1
         elif token in '+-*/^':
-            while (len(operator_stack) != 0 and precedence(operator_stack[-1]) >= precedence(token)):
+            while (len(operator_stack) != 0 and OperatorPrecedence(operator_stack[-1]) >= OperatorPrecedence(token)):
                 operator = operator_stack.pop()
                 operand2 = operand_stack.pop()
                 operand1 = operand_stack.pop()
-                result = apply_operator_inv(operand1, operand2, operator)
+                result = ApplyForOperand_inv(operand1, operand2, operator)
                 q.append(result)
                 operand_stack.append(result)
             operator_stack.append(token)
@@ -51,7 +54,7 @@ def evaluate_expression_inv(expression, q):
                 operator = operator_stack.pop()
                 operand2 = operand_stack.pop()
                 operand1 = operand_stack.pop()
-                result = apply_operator_inv(operand1, operand2, operator)
+                result = ApplyForOperand_inv(operand1, operand2, operator)
                 q.append(result)
                 operand_stack.append(result)
             operator_stack.pop()  
@@ -63,7 +66,7 @@ def evaluate_expression_inv(expression, q):
         operator = operator_stack.pop()
         operand2 = operand_stack.pop()
         operand1 = operand_stack.pop()
-        result = apply_operator_inv(operand1, operand2, operator)
+        result = ApplyForOperand_inv(operand1, operand2, operator)
         q.append(result)
         operand_stack.append(result)
 
@@ -80,11 +83,11 @@ def evaluate_expression(expression, q):
             operand_stack.append((token))
             index += 1
         elif token in '+-*/^':
-            while (len(operator_stack) != 0 and precedence(operator_stack[-1]) >= precedence(token)):
+            while (len(operator_stack) != 0 and OperatorPrecedence(operator_stack[-1]) >= OperatorPrecedence(token)):
                 operator = operator_stack.pop()
                 operand2 = operand_stack.pop()
                 operand1 = operand_stack.pop()
-                result = apply_operator(operand1, operand2, operator, q)
+                result = ApplyForOperand(operand1, operand2, operator, q)
                 q.append(result)
                 operand_stack.append(result)
             operator_stack.append(token)
@@ -97,7 +100,7 @@ def evaluate_expression(expression, q):
                 operator = operator_stack.pop()
                 operand2 = operand_stack.pop()
                 operand1 = operand_stack.pop()
-                result = apply_operator(operand1, operand2, operator, q)
+                result = ApplyForOperand(operand1, operand2, operator, q)
                 q.append(result)
                 operand_stack.append(result)
             operator_stack.pop()  
@@ -110,7 +113,7 @@ def evaluate_expression(expression, q):
         operator = operator_stack.pop()
         operand2 = operand_stack.pop()
         operand1 = operand_stack.pop()
-        result = apply_operator(operand1, operand2, operator, q)
+        result = ApplyForOperand(operand1, operand2, operator, q)
         q.append(result)
         operand_stack.append(result)
 
@@ -427,7 +430,7 @@ def create_graph(g, q, i, expression, mode):
                     node2 = token
                    
             elif token in '+*':
-                operator = precedence(token)
+                operator = OperatorPrecedence(token)
                 
         if operator == 1:
             add_edge_parallel_1(g, node1, node2)
@@ -439,7 +442,7 @@ def create_graph(g, q, i, expression, mode):
         for token in expre:
             
             if token in '+*':
-                operator = precedence(token)
+                operator = OperatorPrecedence(token)
             elif token.isalpha():
                 node = token
                 create_node(g, token)

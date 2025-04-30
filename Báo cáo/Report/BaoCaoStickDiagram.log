@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  28 APR 2025 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  30 APR 2025 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -940,11 +940,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-<../PNG/Stick_handwrite.jpg, id=158, 1927.2pt x 2569.6pt>
+<../PNG/Stick_handwrite.jpg, id=158, 2569.6pt x 1927.2pt>
 File: ../PNG/Stick_handwrite.jpg Graphic file (type jpg)
 <use ../PNG/Stick_handwrite.jpg>
 Package pdftex.def Info: ../PNG/Stick_handwrite.jpg  used on input line 168.
-(pdftex.def)             Requested size: 248.96162pt x 331.94244pt.
+(pdftex.def)             Requested size: 398.3401pt x 298.74232pt.
 [4 <../PNG/Euler_CMOS.jpg> <../PNG/Euler_alone.jpg>] [5 <../PNG/Stick_handwrite.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 184--191
 
@@ -972,7 +972,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  93i,10n,99p,627b,543s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on BaoCaoStickDiagram.pdf (8 pages, 2590520 bytes).
+Output written on BaoCaoStickDiagram.pdf (8 pages, 2357863 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  159 compressed objects within 2 object streams
