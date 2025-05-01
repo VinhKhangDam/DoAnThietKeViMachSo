@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  1 MAY 2025 11:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  1 MAY 2025 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -979,22 +979,22 @@ File: ../PNG/pmos.png Graphic file (type png)
 <use ../PNG/pmos.png>
 Package pdftex.def Info: ../PNG/pmos.png  used on input line 403.
 (pdftex.def)             Requested size: 497.92325pt x 57.81009pt.
-<../PNG/nmos.png, id=218, 804.00375pt x 93.34875pt>
-File: ../PNG/nmos.png Graphic file (type png)
-<use ../PNG/nmos.png>
-Package pdftex.def Info: ../PNG/nmos.png  used on input line 410.
-(pdftex.def)             Requested size: 497.92325pt x 57.81009pt.
  [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.414 \newpage
-              
+l.407 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.414 \newpage
-               <../PNG/Terminal_Python.png> <../PNG/pdiff_mm.png>]
+l.407 
+       <../PNG/Terminal_Python.png> <../PNG/pdiff_mm.png>]
+<../PNG/nmos.png, id=226, 804.00375pt x 93.34875pt>
+File: ../PNG/nmos.png Graphic file (type png)
+<use ../PNG/nmos.png>
+Package pdftex.def Info: ../PNG/nmos.png  used on input line 410.
+(pdftex.def)             Requested size: 497.92325pt x 57.81009pt.
 <../PNG/hehe.png, id=227, 1198.4775pt x 366.36874pt>
 File: ../PNG/hehe.png Graphic file (type png)
 <use ../PNG/hehe.png>
@@ -1003,40 +1003,51 @@ Package pdftex.def Info: ../PNG/hehe.png  used on input line 421.
 <../PNG/VDD.png, id=228, 628.3475pt x 153.57375pt>
 File: ../PNG/VDD.png Graphic file (type png)
 <use ../PNG/VDD.png>
-Package pdftex.def Info: ../PNG/VDD.png  used on input line 442.
+Package pdftex.def Info: ../PNG/VDD.png  used on input line 441.
 (pdftex.def)             Requested size: 497.92325pt x 121.69685pt.
  [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 Đ
-        ến đây, ta đã hoàn thành xong việc kết nối với VDD, ...
+l.445 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 Đ
-        ến đây, ta đã hoàn thành xong việc kết nối với VDD, ...
+l.445 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.451 Đ
-        ến đây, ta đã hoàn thành xong việc kết nối với VDD, ... <../PNG/pmos.png> <../PNG/nmos.png> <../PNG/hehe.png>]
-<../PNG/DEMO.png, id=240, 1927.2pt x 1084.05pt>
-File: ../PNG/DEMO.png Graphic file (type png)
-<use ../PNG/DEMO.png>
-Package pdftex.def Info: ../PNG/DEMO.png  used on input line 458.
-(pdftex.def)             Requested size: 398.3401pt x 224.05122pt.
+l.445 
+       <../PNG/pmos.png> <../PNG/nmos.png> <../PNG/hehe.png>]
+<../PNG/Algorithm_VDD.png, id=240, 771.88374pt x 1404.24625pt>
+File: ../PNG/Algorithm_VDD.png Graphic file (type png)
+<use ../PNG/Algorithm_VDD.png>
+Package pdftex.def Info: ../PNG/Algorithm_VDD.png  used on input line 451.
+(pdftex.def)             Requested size: 348.54475pt x 634.09055pt.
  [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.462 \newpage
-              
+l.455 
+       <../PNG/VDD.png>]
+<../PNG/DEMO_Real.png, id=247, 1922.18124pt x 989.6975pt>
+File: ../PNG/DEMO_Real.png Graphic file (type png)
+<use ../PNG/DEMO_Real.png>
+Package pdftex.def Info: ../PNG/DEMO_Real.png  used on input line 463.
+(pdftex.def)             Requested size: 398.3401pt x 205.09412pt.
+ [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.462 \newpage
-               <../PNG/VDD.png> <../PNG/DEMO.png>] [14] (./BaoCaoStickDiagram.aux)
+l.466 \end{figure}
+                   <../PNG/Algorithm_VDD.png>] [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.467 \newpage
+               <../PNG/DEMO_Real.png>] [16] (./BaoCaoStickDiagram.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1046,18 +1057,18 @@ Package rerunfilecheck Info: File `BaoCaoStickDiagram.out' has not changed.
  )
 (\end occurred when \ifnum on line 94 was incomplete) 
 Here is how much of TeX's memory you used:
- 29596 strings out of 474222
- 590246 string characters out of 5748733
+ 29607 strings out of 474222
+ 590539 string characters out of 5748733
  1933975 words of memory out of 5000000
- 51337 multiletter control sequences out of 15000+600000
+ 51345 multiletter control sequences out of 15000+600000
  565731 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,10n,99p,706b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on BaoCaoStickDiagram.pdf (15 pages, 2776185 bytes).
+Output written on BaoCaoStickDiagram.pdf (17 pages, 2719720 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 387 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 392 words of extra memory for PDF output out of 10000 (max. 10000000)
 

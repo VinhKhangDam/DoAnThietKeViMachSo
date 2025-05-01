@@ -398,25 +398,25 @@ và tương tụ với ndiff là đường màu xanh.
 Chạy vòng lặp for để ghi các đỉnh trong mảng ra, mỗi đỉnh cách đều nhau và tất cả cùng nằm trên 
 đường thẳng tọa độ y là 5 đối với PMOS (đường pdiff) và đối với NMOS (đường ndiff).
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../PNG/pmos.png}
     \caption{PMOS}
     \label{fig:pmos}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../PNG/nmos.png}
     \caption{NMOS}
     \label{fig:nmos}
 \end{figure}
-\newpage
+
 Tiếp đến, ta sẽ duyệt qua các cạnh của đồ thị PMOS, dựa vào tọa độ x của từng đỉnh
 để vẽ cạnh, vì các đỉnh liền kề nhau đã có sẵn trong Euler path PMOS nên ta chỉ 
 xét các đỉnh ở xa nhau (tức khoảng cách lớn hơn 1).
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../PNG/hehe.png}
     \caption{Duyệt từng đỉnh}
@@ -436,8 +436,7 @@ Với đồ thị NMOS, thực hiện tương tự.
 
 \paragraph{Vẽ các đường nối nguồn và ngõ ra}
 
-
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{../PNG/VDD.png}
     \caption{Vẽ VDD}
@@ -447,15 +446,21 @@ Với đồ thị NMOS, thực hiện tương tự.
 Ta thực hiện việc này vì khi vẽ sẽ ưu tiên các đỉnh liền kề để vẽ duy nhất 1 đường ở giữa 2 đỉnh đó và 
 các đỉnh không liền kề sẽ được vẽ theo sơ đồ giải thuật sau:
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../PNG/Algorithm_VDD.png}
+    \caption{Giải thuật vẽ VDD}
+    \label{fig:VDD_Algorithm}
+\end{figure}
 
 Đến đây, ta đã hoàn thành xong việc kết nối với VDD, các đường kết nối tới GND, output còn lại đều được vẽ theo cách tương tự như VDD
 %3.
 \subsection{Kết quả mô phỏng}
 Ví dụ về : \( Y = \overline{A *(B + C) + D * E} \)
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{../PNG/DEMO.png}
+    \includegraphics[width=0.8\textwidth]{../PNG/DEMO_Real.png}
     \caption{Demo khi chạy}
     \label{fig:DEMO}
 \end{figure}

@@ -17,5 +17,5 @@
 \contentsline {paragraph}{\numberline {2.2.1}Vẽ các đường ndiff, pdiff, GND, VDD và các đường đại diện cho các phần tử logic}{11}{paragraph.2.2.2.1}%
 \contentsline {paragraph}{\numberline {2.2.2}Vẽ đường NMOS, PMOS}{11}{paragraph.2.2.2.2}%
 \contentsline {paragraph}{\numberline {2.2.3}Vẽ các đường nối nguồn và ngõ ra}{13}{paragraph.2.2.2.3}%
-\contentsline {subsection}{\numberline {3}Kết quả mô phỏng}{13}{subsection.2.3}%
-\contentsline {section}{\numberline {III}Tổng kết}{14}{section.3}%
+\contentsline {subsection}{\numberline {3}Kết quả mô phỏng}{15}{subsection.2.3}%
+\contentsline {section}{\numberline {III}Tổng kết}{16}{section.3}%
