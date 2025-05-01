@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  1 MAY 2025 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.4.13)  1 MAY 2025 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -902,151 +902,151 @@ l.100 \newpage
 <../PNG/ViDuSchematic.jpg, id=167, 1927.2pt x 2569.6pt>
 File: ../PNG/ViDuSchematic.jpg Graphic file (type jpg)
 <use ../PNG/ViDuSchematic.jpg>
-Package pdftex.def Info: ../PNG/ViDuSchematic.jpg  used on input line 150.
+Package pdftex.def Info: ../PNG/ViDuSchematic.jpg  used on input line 151.
 (pdftex.def)             Requested size: 248.96162pt x 331.94244pt.
  [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.157 Ở
+l.158 Ở
           đây, chúng ta sẽ tìm đường đi Euler cho vùng PMOS pull... <../PNG/ViDuSchematic.jpg>]
 <../PNG/Euler_CMOS.jpg, id=173, 1927.2pt x 2569.6pt>
 File: ../PNG/Euler_CMOS.jpg Graphic file (type jpg)
 <use ../PNG/Euler_CMOS.jpg>
-Package pdftex.def Info: ../PNG/Euler_CMOS.jpg  used on input line 161.
+Package pdftex.def Info: ../PNG/Euler_CMOS.jpg  used on input line 162.
 (pdftex.def)             Requested size: 248.96162pt x 331.94244pt.
 <../PNG/Euler_alone.jpg, id=174, 1927.2pt x 2569.6pt>
 File: ../PNG/Euler_alone.jpg Graphic file (type jpg)
 <use ../PNG/Euler_alone.jpg>
-Package pdftex.def Info: ../PNG/Euler_alone.jpg  used on input line 168.
+Package pdftex.def Info: ../PNG/Euler_alone.jpg  used on input line 169.
 (pdftex.def)             Requested size: 199.16626pt x 265.52258pt.
  [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.172 
+l.173 
        <../PNG/Euler_CMOS.jpg>]
 <../PNG/Stick_handwrite.jpg, id=180, 2569.6pt x 1927.2pt>
 File: ../PNG/Stick_handwrite.jpg Graphic file (type jpg)
 <use ../PNG/Stick_handwrite.jpg>
-Package pdftex.def Info: ../PNG/Stick_handwrite.jpg  used on input line 177.
+Package pdftex.def Info: ../PNG/Stick_handwrite.jpg  used on input line 178.
 (pdftex.def)             Requested size: 398.3401pt x 298.74232pt.
  [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.184 \newpage
+l.185 \newpage
               
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.184 \newpage
+l.185 \newpage
                <../PNG/Euler_alone.jpg> <../PNG/Stick_handwrite.jpg>]
 <../PNG/Algorithm_NMOS.png, id=188, 782.925pt x 666.49pt>
 File: ../PNG/Algorithm_NMOS.png Graphic file (type png)
 <use ../PNG/Algorithm_NMOS.png>
-Package pdftex.def Info: ../PNG/Algorithm_NMOS.png  used on input line 220.
+Package pdftex.def Info: ../PNG/Algorithm_NMOS.png  used on input line 221.
 (pdftex.def)             Requested size: 398.3401pt x 339.10199pt.
  [6] [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.245 T
+l.246 T
        hay vì sử dụng đường đi Euler, ta sẽ sử dụng đườn... <../PNG/Algorithm_NMOS.png>] [8]
 <../PNG/NoiNguon.png, id=204, 371.3875pt x 760.8425pt>
 File: ../PNG/NoiNguon.png Graphic file (type png)
 <use ../PNG/NoiNguon.png>
-Package pdftex.def Info: ../PNG/NoiNguon.png  used on input line 344.
+Package pdftex.def Info: ../PNG/NoiNguon.png  used on input line 345.
 (pdftex.def)             Requested size: 248.96162pt x 510.04045pt.
  [9] [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.361 2
+l.362 2
        . Tạo đồ thị mô hình hóa NMOS pull-down network. <../PNG/NoiNguon.png>]
 <../PNG/Terminal_Python.png, id=215, 1819.79875pt x 199.74625pt>
 File: ../PNG/Terminal_Python.png Graphic file (type png)
 <use ../PNG/Terminal_Python.png>
-Package pdftex.def Info: ../PNG/Terminal_Python.png  used on input line 377.
+Package pdftex.def Info: ../PNG/Terminal_Python.png  used on input line 378.
 (pdftex.def)             Requested size: 497.92325pt x 54.6515pt.
 <../PNG/pdiff_mm.png, id=216, 685.56125pt x 174.6525pt>
 File: ../PNG/pdiff_mm.png Graphic file (type png)
 <use ../PNG/pdiff_mm.png>
-Package pdftex.def Info: ../PNG/pdiff_mm.png  used on input line 388.
+Package pdftex.def Info: ../PNG/pdiff_mm.png  used on input line 389.
 (pdftex.def)             Requested size: 497.92325pt x 126.853pt.
 <../PNG/pmos.png, id=217, 804.00375pt x 93.34875pt>
 File: ../PNG/pmos.png Graphic file (type png)
 <use ../PNG/pmos.png>
-Package pdftex.def Info: ../PNG/pmos.png  used on input line 403.
+Package pdftex.def Info: ../PNG/pmos.png  used on input line 404.
 (pdftex.def)             Requested size: 497.92325pt x 57.81009pt.
  [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.407 
+l.408 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.407 
+l.408 
        <../PNG/Terminal_Python.png> <../PNG/pdiff_mm.png>]
 <../PNG/nmos.png, id=226, 804.00375pt x 93.34875pt>
 File: ../PNG/nmos.png Graphic file (type png)
 <use ../PNG/nmos.png>
-Package pdftex.def Info: ../PNG/nmos.png  used on input line 410.
+Package pdftex.def Info: ../PNG/nmos.png  used on input line 411.
 (pdftex.def)             Requested size: 497.92325pt x 57.81009pt.
 <../PNG/hehe.png, id=227, 1198.4775pt x 366.36874pt>
 File: ../PNG/hehe.png Graphic file (type png)
 <use ../PNG/hehe.png>
-Package pdftex.def Info: ../PNG/hehe.png  used on input line 421.
+Package pdftex.def Info: ../PNG/hehe.png  used on input line 422.
 (pdftex.def)             Requested size: 497.92325pt x 152.2079pt.
 <../PNG/VDD.png, id=228, 628.3475pt x 153.57375pt>
 File: ../PNG/VDD.png Graphic file (type png)
 <use ../PNG/VDD.png>
-Package pdftex.def Info: ../PNG/VDD.png  used on input line 441.
+Package pdftex.def Info: ../PNG/VDD.png  used on input line 442.
 (pdftex.def)             Requested size: 497.92325pt x 121.69685pt.
  [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.445 
+l.446 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.445 
+l.446 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.445 
+l.446 
        <../PNG/pmos.png> <../PNG/nmos.png> <../PNG/hehe.png>]
 <../PNG/Algorithm_VDD.png, id=240, 771.88374pt x 1404.24625pt>
 File: ../PNG/Algorithm_VDD.png Graphic file (type png)
 <use ../PNG/Algorithm_VDD.png>
-Package pdftex.def Info: ../PNG/Algorithm_VDD.png  used on input line 451.
+Package pdftex.def Info: ../PNG/Algorithm_VDD.png  used on input line 452.
 (pdftex.def)             Requested size: 348.54475pt x 634.09055pt.
  [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.455 
+l.456 
        <../PNG/VDD.png>]
 <../PNG/DEMO_Real.png, id=247, 1922.18124pt x 989.6975pt>
 File: ../PNG/DEMO_Real.png Graphic file (type png)
 <use ../PNG/DEMO_Real.png>
-Package pdftex.def Info: ../PNG/DEMO_Real.png  used on input line 463.
+Package pdftex.def Info: ../PNG/DEMO_Real.png  used on input line 464.
 (pdftex.def)             Requested size: 398.3401pt x 205.09412pt.
  [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.466 \end{figure}
+l.467 \end{figure}
                    <../PNG/Algorithm_VDD.png>] [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.467 \newpage
+l.468 \newpage
                <../PNG/DEMO_Real.png>] [16] (./BaoCaoStickDiagram.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1065,7 +1065,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  93i,10n,99p,706b,597s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on BaoCaoStickDiagram.pdf (17 pages, 2719720 bytes).
+Output written on BaoCaoStickDiagram.pdf (17 pages, 2719717 bytes).
 PDF statistics:
  307 PDF objects out of 1000 (max. 8388607)
  223 compressed objects within 3 object streams
