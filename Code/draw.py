@@ -19,7 +19,9 @@ def draw_stick_diagram(g_nmos, g_pmos, euler_path_nmos,euler_path_pmos,source_no
     ax.plot([-4.5, 14], [-1, -1], 'b-', linewidth=2) 
     ax.text(14.5, -1, 'Gnd', verticalalignment='center', fontsize=12)
     ax.plot([-3.5, 13], [5, 5], 'y-', linewidth=2)
+    ax.text(13.5, 5, 'pdiff', verticalalignment='center', fontsize=12)
     ax.plot([-3.5, 13], [0, 0], 'g-', linewidth=2)
+    ax.text(13.5, 0, 'ndiff', verticalalignment='center', fontsize=12)
     for element in logic_elements:
         x = 1.5 + logic_elements.index(element) * 2
         count = logic_elements.index(element)*2
